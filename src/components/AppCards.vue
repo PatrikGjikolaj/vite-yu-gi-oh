@@ -19,7 +19,8 @@ export default {
             </div>
         </div>
         <div class="row gap-3 justify-content-between">
-            <div class="col-2 bg_orange text-center" v-for="(card, c) in store.cards">
+            <div class="col-2 bg_orange text-center d-flex flex-column justify-content-between"
+                v-for="(card, c) in store.cards">
                 <img :src="card.card_images[0].image_url" alt="" class="img-fluid">
                 <h5 class="text-white">{{ card.name }}</h5>
                 <h6>{{ card.type }}</h6>
