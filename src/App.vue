@@ -17,15 +17,7 @@ export default {
       archetipi
     }
   },
-  mounted() {
 
-    axios.get(this.store.urlAPI).then(r => {
-      store.cards = r.data.data
-    }),
-      axios.get(this.archetipi.urlAPI).then(a => {
-        archetipi.archetipiList = a.data
-      })
-  }
 }
 </script>
 
