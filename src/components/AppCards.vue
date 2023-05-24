@@ -23,7 +23,7 @@ export default {
                 v-for="(card, c) in store.cards">
                 <img :src="card.card_images[0].image_url" alt="" class="img-fluid">
                 <h5 class="text-white">{{ card.name }}</h5>
-                <h6>{{ card.type }}</h6>
+                <h6>{{ card.archetype }}</h6>
             </div>
         </div>
     </div>

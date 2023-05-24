@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 
 import { store } from './data/store';
+import { archetipi } from './data/store';
 import axios from 'axios';
 
 export default {
@@ -12,15 +13,18 @@ export default {
   },
   data() {
     return {
-      store
+      store,
+      archetipi
     }
   },
   mounted() {
-    console.log("App Mounted, store: ", this.store);
 
     axios.get(this.store.urlAPI).then(r => {
       store.cards = r.data.data
-    })
+    }),
+      axios.get(this.archetipi.urlAPI).then(a => {
+        archetipi.archetipiList = a.data
+      })
   }
 }
 </script>
