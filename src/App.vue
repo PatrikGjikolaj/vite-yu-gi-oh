@@ -2,8 +2,8 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 
-import { store } from './data/store';
-import { archetipi } from './data/store';
+// import { store } from './data/store';
+// import { archetipi } from './data/store';
 import axios from 'axios';
 
 export default {
@@ -13,8 +13,8 @@ export default {
   },
   data() {
     return {
-      store,
-      archetipi
+      // store,
+      // archetipi
     }
   },
 

@@ -1,12 +1,20 @@
 <script>
 
 import { store } from '../data/store';
+import axios from 'axios';
 
 export default {
     data() {
         return {
-            store
+            store,
         }
+    },
+    mounted() {
+        axios.get(this.store.urlAPI).then(r => {
+            this.store.cards = [];
+            this.store.cards = r.data.data
+            console.log(this.store.cards)
+        })
     }
 }
 </script>
@@ -20,7 +28,7 @@ export default {
         </div>
         <div class="row gap-3 justify-content-between">
             <div class="col-2 bg_orange text-center d-flex flex-column justify-content-between p-0"
-                v-for="(card, c) in store.cards">
+                v-for="(card, c) in this.store.cards">
                 <img :src="card.card_images[0].image_url" alt="" class="img-fluid">
                 <h5 class="text-white">{{ card.name }}</h5>
                 <h6>{{ card.archetype }}</h6>

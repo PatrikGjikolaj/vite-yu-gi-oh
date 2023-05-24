@@ -28,7 +28,8 @@ export default {
 
             axios.get(indirizzo).then(r => {
                 this.store.cards = [];
-                this.store.cards = r.data
+                this.store.cards = r.data.data
+                console.log(this.store.cards)
             });
         },
     },
