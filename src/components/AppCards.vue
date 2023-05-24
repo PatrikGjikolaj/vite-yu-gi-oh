@@ -23,7 +23,7 @@ export default {
     <div class="container p-5 bg_white">
         <div class="row">
             <div class="col-12 bg_black text-white py-2">
-                <span class="fw-bold">Found 20 cards</span>
+                <span class="fw-bold">Found {{ this.store.cards.length }} cards</span>
             </div>
         </div>
         <div class="row gap-3 justify-content-between">
